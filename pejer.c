@@ -16,7 +16,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #include "pejer.h"
-
+__attribute__ ((weak))
+bool process_record_secrets(uint16_t keycode, keyrecord_t *record) {
+  return true;
+}
 userspace_config_t userspace_config;
 #if (defined(UNICODE_ENABLE) || defined(UNICODEMAP_ENABLE) || defined(UCIS_ENABLE))
 #    define DRASHNA_UNICODE_MODE UC_WIN
@@ -210,7 +213,7 @@ bool hasAllBitsInMask(uint8_t value, uint8_t mask) {
 __attribute__((weak)) bool process_record_keymap(uint16_t keycode, keyrecord_t *record) { return true; }
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-  return process_record_keymap(keycode, record); 
+  return process_record_keymap(keycode, record) && process_record_secrets(keycode, record); 
 }
 
 #ifdef ENCODER_ENABLE

@@ -1,6 +1,8 @@
 #pragma once
 #include "pejer.h"
 /*
+So very stopen from Drashna! 
+
 Since our quirky block definitions are basically a list of comma separated
 arguments, we need a wrapper in order for these definitions to be
 expanded before being used as arguments to the LAYOUT_xxx macro.
@@ -178,11 +180,11 @@ Shamefully stolen from Drashna.
 */
 
 #define ___________PEJER_QWERTY_L1_________________        KC_Q,    KC_W,    KC_PEJ_E,    KC_R,    KC_T
-#define ___________PEJER_QWERTY_L2_________________        KC_PEJ_A,    KC_PEJ_S,    KC_PEJ_D,    KC_PEJ_F,    KC_G
+#define ___________PEJER_QWERTY_L2_________________        KC_A,    KC_S,    KC_D,    KC_F,    KC_G
 #define ___________PEJER_QWERTY_L3_________________        KC_Z,    KC_X,    KC_C,    KC_V,    KC_B
 
-#define ___________PEJER_QWERTY_R1_________________        KC_Y,    KC_U,    KC_PEJ_I,    KC_O,    KC_P
-#define ___________PEJER_QWERTY_R2_________________        KC_H,    KC_PEJ_J,    KC_PEJ_K,    KC_PEJ_L,    KC_PEJ_SCLN
+#define ___________PEJER_QWERTY_R1_________________        KC_Y,    KC_U,    KC_I,    KC_O,    KC_P
+#define ___________PEJER_QWERTY_R2_________________        KC_H,    KC_J,    KC_K,    KC_L,    KC_PEJ_SCLN
 #define ___________PEJER_QWERTY_R3_________________        KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLASH
 
 #define ___________PEJER_SYMBOL0_L1________________        KC_PEJ_1,    KC_PEJ_2,    KC_PEJ_3,    KC_PEJ_4,    KC_PEJ_5
@@ -194,11 +196,11 @@ Shamefully stolen from Drashna.
 #define ___________PEJER_SYMBOL0_R3________________        KC_F16,     KC_7,     KC_8,     KC_9,   KC_F20
 
 #define ___________PEJER_SYMBOL1_L1________________         KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5
-#define ___________PEJER_SYMBOL1_L2________________        KC_PEJ_A, KC_PEJ_S, KC_PEJ_D, KC_PEJ_F,     KC_G
+#define ___________PEJER_SYMBOL1_L2________________        KC_A, KC_S, KC_D, KC_F,     KC_G
 #define ___________PEJER_SYMBOL1_L3________________         KC_Z,     KC_X,     KC_C,     KC_V,     KC_B
 
 #define ___________PEJER_SYMBOL1_R1________________         KC_F6,    KC_F7,    KC_F8,    KC_F9,   KC_F10
-#define ___________PEJER_SYMBOL1_R2________________         KC_LEFT, KC_DOWN,    KC_UP, KC_RIGHT, KC_XXXXX
+#define ___________PEJER_SYMBOL1_R2________________         KC_LEFT, KC_DOWN,    KC_UP, KC_RIGHT, KC_SEC1
 #define ___________PEJER_SYMBOL1_R3________________         KC_XXXXX, KC_XXXXX, KC_XXXXX, KC_XXXXX, KC_XXXXX
 
  

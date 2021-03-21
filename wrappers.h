@@ -98,6 +98,7 @@ enum userspace_custom_keycodes {
 #define LAYOUT_ergodox_pretty_wrapper(...)   LAYOUT_ergodox_pretty(__VA_ARGS__)
 #define KEYMAP_wrapper(...)                  LAYOUT(__VA_ARGS__)
 #define LAYOUT_wrapper(...)                  LAYOUT(__VA_ARGS__)
+#define LAYOUT_homerow_wrapper(...)          LAYOUT(__VA_ARGS__)
 #define LAYOUT_ortho_4x12_wrapper(...)       LAYOUT_ortho_4x12(__VA_ARGS__)
 #define LAYOUT_ortho_5x12_wrapper(...)       LAYOUT_ortho_5x12(__VA_ARGS__)
 #define LAYOUT_gergo_wrapper(...)            LAYOUT_gergo(__VA_ARGS__)

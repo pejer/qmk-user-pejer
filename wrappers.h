@@ -43,8 +43,8 @@ enum userspace_custom_keycodes {
     UC_TABL,                        // ┬─┬ノ( º _ ºノ)
     UC_SHRG,                        // ¯\_(ツ)_/¯
     UC_DISA,                        // ಠ_ಠ
-    NEW_SAFE_RANGE,                  // use "NEWPLACEHOLDER for keymap specific codes
-    KC_PRINT_TRUTH
+    KC_SCROLL,
+    NEW_SAFE_RANGE                  // use "NEWPLACEHOLDER for keymap specific codes
 };
 
 
@@ -205,8 +205,8 @@ Shamefully stolen from Drashna.
 
  
 #define ___________PEJER_NUMBER_L1_________________        KC_1,     KC_2,     KC_3,     KC_4,     KC_5 
-#define ___________PEJER_NUMBER_L2_________________        KC_LSFT , KC_NO, KC_BTN2, KC_BTN1,  KC_NO
-#define ___________PEJER_NUMBER_L3_________________        _______, _______, KC_WH_U, KC_WH_D ,_______
+#define ___________PEJER_NUMBER_L2_________________        KC_LSFT , KC_NO, KC_BTN2, KC_BTN1,  KC_ACL0
+#define ___________PEJER_NUMBER_L3_________________        _______, _______, KC_WH_U, KC_WH_D , KC_SCROLL
 
 #define ___________PEJER_NUMBER_R1_________________       KC_6,     KC_1,     KC_2,     KC_3,     KC_0
 #define ___________PEJER_NUMBER_R2_________________       KC_EQL,     KC_4,     KC_5,     KC_6,   KC_F10 

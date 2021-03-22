@@ -47,16 +47,11 @@ bool          hasAllBitsInMask(uint8_t value, uint8_t mask);
 typedef union {
     uint32_t raw;
     struct {
-        bool    rgb_layer_change     :1;
-        bool    is_overwatch         :1;
-        bool    nuke_switch          :1;
-        uint8_t unicode_mod          :4;
-        bool    swapped_numbers      :1;
-        bool    rgb_matrix_idle_anim :1;
+        bool    trackball_speed_fast  :1;
+        bool    trackball_scroll      :1;
+        bool    trackball_led_on      :1;
     };
 } userspace_config_t;
 // clang-format on
 
-extern userspace_config_t userspace_config;
-
-
+extern userspace_config_t user_config;

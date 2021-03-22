@@ -20,7 +20,7 @@ __attribute__ ((weak))
 bool process_record_secrets(uint16_t keycode, keyrecord_t *record) {
   return true;
 }
-userspace_config_t userspace_config;
+userspace_config_t user_config;
 #if (defined(UNICODE_ENABLE) || defined(UNICODEMAP_ENABLE) || defined(UCIS_ENABLE))
 #    define DRASHNA_UNICODE_MODE UC_WIN
 #else
@@ -77,7 +77,7 @@ void bootmagic_lite(void) {
 __attribute__((weak)) void keyboard_pre_init_keymap(void) {}
 
 void keyboard_pre_init_user(void) {
-    userspace_config.raw = eeconfig_read_user();
+    user_config.raw = eeconfig_read_user();
     keyboard_pre_init_keymap();
 }
 // Add reconfigurable functions here, for keymap customization
@@ -110,7 +110,14 @@ void keyboard_post_init_user(void) {
 //#if defined(RGBLIGHT_ENABLE) || defined(RGB_MATRIX_ENABLE)
 //    keyboard_post_init_rgb();
 //#endif
-    keyboard_post_init_keymap();
+  user_config.raw = eeconfig_read_user();
+
+  // Lets set up the configs
+  user_config.trackball_scroll      = false;
+  user_config.trackball_speed_fast  = false;
+  user_config.trackball_led_on      = true;
+  
+  keyboard_post_init_keymap();
 }
 
 __attribute__((weak)) void shutdown_keymap(void) {}
@@ -186,21 +193,6 @@ __attribute__((weak)) void led_set_keymap(uint8_t usb_led) {}
 // So nothing goes here.
 void led_set_user(uint8_t usb_led) { led_set_keymap(usb_led); }
 
-__attribute__((weak)) void eeconfig_init_keymap(void) {}
-
-void eeconfig_init_user(void) {
-    userspace_config.raw              = 0;
-    userspace_config.rgb_layer_change = true;
-    eeconfig_update_user(userspace_config.raw);
-#if (defined(UNICODE_ENABLE) || defined(UNICODEMAP_ENABLE) || defined(UCIS_ENABLE))
-    set_unicode_input_mode(DRASHNA_UNICODE_MODE);
-    get_unicode_input_mode();
-#else
-    eeprom_update_byte(EECONFIG_UNICODEMODE, DRASHNA_UNICODE_MODE);
-#endif
-    eeconfig_init_keymap();
-    keyboard_init();
-}
 
 bool hasAllBitsInMask(uint8_t value, uint8_t mask) {
     value &= 0xF;
@@ -238,10 +230,19 @@ void encoder_update_user(uint8_t index, bool clockwise) {
 #endif
 
 #ifdef TRACKBALL_ENABLE
+uint8_t tb_multiplier = 5;
 void process_trackball_user(trackball_record_t *record) {
     if (record->type & TB_MOVED) {
-            record->x *= 5;
-            record->y *= 5;
+      if (user_config.trackball_scroll) {
+            report_mouse_t currentReport = pointing_device_get_report();
+            currentReport.h += record->x;
+            currentReport.v += record->y;
+            pointing_device_set_report(currentReport);
+            record->type &= ~TB_MOVED;
+        } else {
+            record->x *= (tb_multiplier + (user_config.trackball_speed_fast? 16 : 0));
+            record->y *= (tb_multiplier + (user_config.trackball_speed_fast? 16 : 0));
+        }
     }
     return;
 }

@@ -199,9 +199,9 @@ Shamefully stolen from Drashna.
 #define ___________PEJER_SYMBOL1_L2________________        KC_A, KC_S, KC_D, KC_F,     KC_G
 #define ___________PEJER_SYMBOL1_L3________________         KC_Z,     KC_X,     KC_C,     KC_V,     KC_B
 
-#define ___________PEJER_SYMBOL1_R1________________         KC_F6,    KC_F7,    KC_F8,    KC_F9,   KC_F10
-#define ___________PEJER_SYMBOL1_R2________________         KC_LEFT, KC_DOWN,    KC_UP, KC_RIGHT, KC_SEC1
-#define ___________PEJER_SYMBOL1_R3________________         KC_XXXXX, KC_XXXXX, KC_XXXXX, KC_XXXXX, KC_XXXXX
+#define ___________PEJER_SYMBOL1_R1________________         KC_UNDO, KC_CUT,  KC_COPY, KC_PSTE, KC_AGAIN
+#define ___________PEJER_SYMBOL1_R2________________         KC_LEFT, KC_DOWN,    KC_UP, KC_RIGHT, KC_CAPS
+#define ___________PEJER_SYMBOL1_R3________________         KC_HOME, KC_PGDN, KC_PGUP, KC_END, KC_XXXXX
 
  
 #define ___________PEJER_NUMBER_L1_________________        KC_1,     KC_2,     KC_3,     KC_4,     KC_5 

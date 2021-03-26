@@ -171,9 +171,6 @@ enum userspace_custom_keycodes {
 #define KC_PEJ_BCK LSFT(RALT(KC_7))
 #define KC_PEJ_RBRC RALT(KC_RBRC)
 
-
-
-
 /*
 Shamefully stolen from Drashna.
 
@@ -195,9 +192,9 @@ Shamefully stolen from Drashna.
 #define ___________PEJER_SYMBOL0_R2________________        KC_EQL,     KC_LBRC, KC_PEJ_RBRC,     KC_6,   KC_F10
 #define ___________PEJER_SYMBOL0_R3________________        KC_F16,     KC_7,     KC_8,     KC_9,   KC_F20
 
-#define ___________PEJER_SYMBOL1_L1________________         KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5
-#define ___________PEJER_SYMBOL1_L2________________        KC_A, KC_S, KC_D, KC_F,     KC_G
-#define ___________PEJER_SYMBOL1_L3________________         KC_Z,     KC_X,     KC_C,     KC_V,     KC_B
+#define ___________PEJER_SYMBOL1_L1________________        KC_F10,   KC_F1,   KC_F2,   KC_F3,   KC_PSCR
+#define ___________PEJER_SYMBOL1_L2________________        KC_F11,   KC_F4,   KC_F5,   KC_F6,   KC_SLCK
+#define ___________PEJER_SYMBOL1_L3________________        KC_F12,   KC_F7,   KC_F8,   KC_F9,   KC_PAUS
 
 #define ___________PEJER_SYMBOL1_R1________________         KC_AGAIN, KC_PSTE,  KC_COPY, KC_CUT, KC_UNDO
 #define ___________PEJER_SYMBOL1_R2________________         KC_LEFT, KC_DOWN,    KC_UP, KC_RIGHT, KC_CAPS

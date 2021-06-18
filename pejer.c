@@ -230,8 +230,8 @@ void encoder_update_user(uint8_t index, bool clockwise) {
 #endif
 
 #ifdef TRACKBALL_ENABLE
-uint8_t tb_multiplier = 4;
-uint8_t tb_accMultiplier = 1;
+uint8_t tb_multiplier = 3;
+uint8_t tb_accMultiplier = 1.25;
 void process_trackball_user(trackball_record_t *record) {
     if (record->type & TB_MOVED) {
       if (user_config.trackball_scroll) {

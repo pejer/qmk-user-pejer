@@ -157,7 +157,8 @@ enum userspace_custom_keycodes {
 #define KC_PEJ_BSPC LT(_SYMBOL0,KC_BSPC)
 #define KC_PEJ_TAB LT(_SYMBOL1, KC_TAB)
 #define KC_PEJ_ESCAPE LT(_SYMBOL2,KC_ESC)
-#define KC_PEJ_AMPR LT(_SYMBOL2,KC_AMPR)
+//#define KC_PEJ_AMPR LT(_SYMBOL2,KC_AMPR)
+#define KC_PEJ_AMPR KC_AMPR
 #define KC_PEJ_QUE LSFT(KC_MINS)
 
 #define KC_PEJ_PARO LSFT(KC_8)

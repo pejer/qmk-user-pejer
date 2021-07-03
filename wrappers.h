@@ -153,9 +153,11 @@ enum userspace_custom_keycodes {
 #define KC_PEJ_8 LSFT(KC_BSLS)
 #define KC_PEJ_9 LSFT(KC_0)
 #define KC_PEJ_0 RALT(KC_7)
-#define KC_PEJ_BSPC LT(_SYMBOL0,KC_BSPC)
 #define KC_PEJ_SPC LT(_NUMBERS,KC_SPC)
+#define KC_PEJ_BSPC LT(_SYMBOL0,KC_BSPC)
 #define KC_PEJ_TAB LT(_SYMBOL1, KC_TAB)
+#define KC_PEJ_ESCAPE LT(_SYMBOL2,KC_ESC)
+#define KC_PEJ_AMPR LT(_SYMBOL2,KC_AMPR)
 #define KC_PEJ_QUE LSFT(KC_MINS)
 
 #define KC_PEJ_PARO LSFT(KC_8)
@@ -196,11 +198,19 @@ Shamefully stolen from Drashna.
 #define ___________PEJER_SYMBOL1_L2________________        KC_F11,   KC_F4,   KC_F5,   KC_F6,   KC_SLCK
 #define ___________PEJER_SYMBOL1_L3________________        KC_F12,   KC_F7,   KC_F8,   KC_F9,   KC_PAUS
 
-#define ___________PEJER_SYMBOL1_R1________________         KC_AGAIN, KC_PSTE,  KC_COPY, KC_CUT, KC_UNDO
-#define ___________PEJER_SYMBOL1_R2________________         KC_LEFT, KC_DOWN,    KC_UP, KC_RIGHT, KC_CAPS
-#define ___________PEJER_SYMBOL1_R3________________         KC_END, KC_PGDN, KC_PGUP, KC_HOME, KC_DEL
+#define ___________PEJER_SYMBOL1_R1________________        KC_AGAIN, KC_PSTE,  KC_COPY, KC_CUT, KC_UNDO
+#define ___________PEJER_SYMBOL1_R2________________        KC_LEFT, KC_DOWN,    KC_UP, KC_RIGHT, KC_CAPS
+#define ___________PEJER_SYMBOL1_R3________________        KC_END, KC_PGDN, KC_PGUP, KC_HOME, KC_DEL
 
  
+#define ___________PEJER_SYMBOL2_L1________________        KC_ESC,   KC_TRNS, KC_TRNS, KC_TRNS, KC_PSCR
+#define ___________PEJER_SYMBOL2_L2________________        KC_BSLS,  KC_TRNS, KC_TRNS, KC_TRNS, KC_SLCK
+#define ___________PEJER_SYMBOL2_L3________________        KC_GRV,   KC_TRNS, KC_TRNS, KC_TRNS, KC_PAUS
+
+#define ___________PEJER_SYMBOL2_R1________________        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_LBRC
+#define ___________PEJER_SYMBOL2_R2________________        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_QUOT
+#define ___________PEJER_SYMBOL2_R3________________        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_AMPR
+
 #define ___________PEJER_NUMBER_L1_________________        KC_1,     KC_2,     KC_3,     KC_4,     KC_5 
 #define ___________PEJER_NUMBER_L2_________________        KC_LSFT , KC_NO, KC_BTN2, KC_BTN1,  KC_ACL0
 #define ___________PEJER_NUMBER_L3_________________        _______, _______, KC_WH_U, KC_WH_D , KC_SCROLL

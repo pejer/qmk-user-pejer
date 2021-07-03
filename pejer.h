@@ -23,6 +23,7 @@ enum userspace_layers {
     _MODS, /* layer 8 */
     _SYMBOL0,
     _SYMBOL1,
+    _SYMBOL2,
     _NUMBERS,
     _MEDIA,
     _LOWER,

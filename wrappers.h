@@ -192,7 +192,7 @@ Shamefully stolen from Drashna.
 #define ___________PEJER_SYMBOL0_L3________________        KC_PEJ_PARC,KC_PEJ_BRAC,KC_PEJ_CURC,KC_PEJ_CIT,KC_PEJ_BCK
 
 #define ___________PEJER_SYMBOL0_R1________________        KC_PEJ_6, KC_PEJ_7,  KC_PEJ_8,  KC_PEJ_9,  KC_PEJ_0
-#define ___________PEJER_SYMBOL0_R2________________        KC_EQL,     KC_LBRC, KC_PEJ_RBRC,     KC_6,   KC_F10
+#define ___________PEJER_SYMBOL0_R2________________        KC_EQL,     KC_PEJ_QUE,  KC_PEJ_RBRC, KC_AMPR,   KC_F10
 #define ___________PEJER_SYMBOL0_R3________________        KC_F16,     KC_7,     KC_8,     KC_9,   KC_F20
 
 #define ___________PEJER_SYMBOL1_L1________________        KC_F10,   KC_F1,   KC_F2,   KC_F3,   KC_PSCR

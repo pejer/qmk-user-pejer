@@ -59,20 +59,20 @@ bool mod_key_press(uint16_t code, uint16_t mod_code, bool pressed, uint16_t this
     return false;
 }
 
-void bootmagic_lite(void) {
-    matrix_scan();
-#if defined(DEBOUNCING_DELAY) && DEBOUNCING_DELAY > 0
-    wait_ms(DEBOUNCING_DELAY * 2);
-#elif defined(DEBOUNCE) && DEBOUNCE > 0
-    wait_ms(DEBOUNCE * 2);
-#else
-    wait_ms(30);
-#endif
-    matrix_scan();
-    if (matrix_get_row(BOOTMAGIC_LITE_ROW) & (1 << BOOTMAGIC_LITE_COLUMN)) {
-        bootloader_jump();
-    }
-}
+// void bootmagic_lite(void) {
+//     matrix_scan();
+// #if defined(DEBOUNCING_DELAY) && DEBOUNCING_DELAY > 0
+//     wait_ms(DEBOUNCING_DELAY * 2);
+// #elif defined(DEBOUNCE) && DEBOUNCE > 0
+//     wait_ms(DEBOUNCE * 2);
+// #else
+//     wait_ms(30);
+// #endif
+//     matrix_scan();
+//     if (matrix_get_row(BOOTMAGIC_LITE_ROW) & (1 << BOOTMAGIC_LITE_COLUMN)) {
+//         bootloader_jump();
+//     }
+// }
 
 __attribute__((weak)) void keyboard_pre_init_keymap(void) {}
 
@@ -209,7 +209,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 }
 
 #ifdef ENCODER_ENABLE
-void encoder_update_user(uint8_t index, bool clockwise) {
+bool encoder_update_user(uint8_t index, bool clockwise) {
     if (index == 0) {
         // Page up/Page down
         if (clockwise) {
@@ -226,6 +226,7 @@ void encoder_update_user(uint8_t index, bool clockwise) {
             tap_code(KC_VOLD);
         }
     }
+    return true;
 }
 #endif
 

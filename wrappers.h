@@ -216,8 +216,8 @@ Shamefully stolen from Drashna.
 #define ___________PEJER_NUMBER_L2_________________        KC_LSFT , KC_NO, KC_BTN2, KC_BTN1,  KC_ACL0
 #define ___________PEJER_NUMBER_L3_________________        _______, _______, KC_WH_U, KC_WH_D , KC_SCROLL
 
-#define ___________PEJER_NUMBER_R1_________________       KC_6,     KC_1,     KC_2,     KC_3,     KC_0
-#define ___________PEJER_NUMBER_R2_________________       KC_EQL,     KC_4,     KC_5,     KC_6,   KC_F10 
+#define ___________PEJER_NUMBER_R1_________________       KC_6,     KC_1,     KC_2,     KC_3,     KC_LBRC
+#define ___________PEJER_NUMBER_R2_________________       KC_EQL,     KC_4,     KC_5,     KC_6,   KC_QUOT 
 #define ___________PEJER_NUMBER_R3_________________        KC_F16,     KC_7,     KC_8,     KC_9,   KC_F20
 
 #define _______________PEJ_BLANK___________________       _______,_______,_______,_______,_______

@@ -1,5 +1,6 @@
 #pragma once
 #include "pejer.h"
+#include "keymap_swedish.h"
 /*
 So very stopen from Drashna! 
 
@@ -134,7 +135,7 @@ enum userspace_custom_keycodes {
 #define KC_PEJ_J CTL_T(KC_J)
 #define KC_PEJ_K ALT_T(KC_K)
 #define KC_PEJ_L GUI_T(KC_L)
-#define KC_PEJ_SCLN SFT_T(KC_SCLN)
+#define KC_PEJ_SCLN SFT_T(SE_ODIA)
 
 // PEJER
 // To access SYMBOL0 and SYMBOL1 layers
@@ -148,7 +149,7 @@ enum userspace_custom_keycodes {
 #define KC_PEJ_3 LSFT(KC_3)
 #define KC_PEJ_4 RALT(KC_4)
 #define KC_PEJ_5 LSFT(KC_5)
-#define KC_PEJ_6 RALT(LSFT(KC_RBRC))
+#define KC_PEJ_6 LSFT(SE_CIRC)
 #define KC_PEJ_7 KC_CIRC
 #define KC_PEJ_8 LSFT(KC_BSLS)
 #define KC_PEJ_9 LSFT(KC_0)
@@ -208,16 +209,16 @@ Shamefully stolen from Drashna.
 #define ___________PEJER_SYMBOL2_L2________________        KC_BSLS,  KC_TRNS, KC_TRNS, KC_TRNS, KC_SLCK
 #define ___________PEJER_SYMBOL2_L3________________        KC_GRV,   KC_TRNS, KC_TRNS, KC_TRNS, KC_PAUS
 
-#define ___________PEJER_SYMBOL2_R1________________        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_LBRC
-#define ___________PEJER_SYMBOL2_R2________________        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_QUOT
+#define ___________PEJER_SYMBOL2_R1________________        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,SE_ARNG 
+#define ___________PEJER_SYMBOL2_R2________________        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,SE_ADIA 
 #define ___________PEJER_SYMBOL2_R3________________        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_AMPR
 
 #define ___________PEJER_NUMBER_L1_________________        KC_1,     KC_2,     KC_3,     KC_4,     KC_5 
 #define ___________PEJER_NUMBER_L2_________________        KC_LSFT , KC_NO, KC_BTN2, KC_BTN1,  KC_ACL0
 #define ___________PEJER_NUMBER_L3_________________        _______, _______, KC_WH_U, KC_WH_D , KC_SCROLL
 
-#define ___________PEJER_NUMBER_R1_________________       KC_6,     KC_1,     KC_2,     KC_3,     KC_LBRC
-#define ___________PEJER_NUMBER_R2_________________       KC_EQL,     KC_4,     KC_5,     KC_6,   KC_QUOT 
+#define ___________PEJER_NUMBER_R1_________________       KC_6,     KC_1,     KC_2,     KC_3,    SE_ARNG 
+#define ___________PEJER_NUMBER_R2_________________       KC_EQL,     KC_4,     KC_5,     KC_6,   SE_ADIA 
 #define ___________PEJER_NUMBER_R3_________________        KC_F16,     KC_7,     KC_8,     KC_9,   KC_F20
 
 #define _______________PEJ_BLANK___________________       _______,_______,_______,_______,_______

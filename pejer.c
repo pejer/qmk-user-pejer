@@ -233,19 +233,31 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
 #ifdef TRACKBALL_ENABLE
 uint8_t tb_multiplier = 3;
 uint8_t tb_accMultiplier = 1.25;
-void process_trackball_user(trackball_record_t *record) {
-    if (record->type & TB_MOVED) {
-      if (user_config.trackball_scroll) {
-            report_mouse_t currentReport = pointing_device_get_report();
-            currentReport.h -= record->x;
-            currentReport.v += record->y;
-            pointing_device_set_report(currentReport);
-            record->type &= ~TB_MOVED;
-        } else {
-            record->x *= (abs(record->x) * (tb_accMultiplier)) + tb_multiplier;
-            record->y *= (abs(record->y) * (tb_accMultiplier)) + tb_multiplier;
-        }
+// void process_trackball_user(trackball_record_t *record) {
+//     if (record->type & TB_MOVED) {
+//       if (user_config.trackball_scroll) {
+//             report_mouse_t currentReport = pointing_device_get_report();
+//             currentReport.h -= record->x;
+//             currentReport.v += record->y;
+//             pointing_device_set_report(currentReport);
+//             record->type &= ~TB_MOVED;
+//         } else {
+//             record->x *= (abs(record->x) * (tb_accMultiplier)) + tb_multiplier;
+//             record->y *= (abs(record->y) * (tb_accMultiplier)) + tb_multiplier;
+//         }
+//     }
+//     return;
+// }
+report_mouse_t pointing_device_task_user(report_mouse_t mouse_report) {
+    if (user_config.trackball_scroll) {
+        mouse_report.h = mouse_report.x;
+        mouse_report.v = mouse_report.y;
+        mouse_report.x = 0;
+        mouse_report.y = 0;
+    } else {
+        mouse_report.x *= (abs(mouse_report.x) * (tb_accMultiplier)) + tb_multiplier;
+        mouse_report.y *= (abs(mouse_report.y) * (tb_accMultiplier)) + tb_multiplier;
     }
-    return;
+    return mouse_report;
 }
 #endif

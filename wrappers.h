@@ -45,6 +45,8 @@ enum userspace_custom_keycodes {
     UC_SHRG,                        // ¯\_(ツ)_/¯
     UC_DISA,                        // ಠ_ಠ
     KC_SCROLL,
+    KC_PEJ_BUT1,
+    KC_PEJ_BUT2,
     NEW_SAFE_RANGE                  // use "NEWPLACEHOLDER for keymap specific codes
 };
 

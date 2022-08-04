@@ -122,7 +122,7 @@ uint8_t tb_multiplier = 0;
 uint8_t tb_accMultiplier = 1;
 report_mouse_t pointing_device_task_user(report_mouse_t mouse_report) {
     if (user_config.trackball_scroll) {
-        mouse_report.h = -mouse_report.x;
+        mouse_report.h = mouse_report.x;
         mouse_report.v = -mouse_report.y;
         mouse_report.x = 0;
         mouse_report.y = 0;
